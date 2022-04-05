@@ -10,7 +10,7 @@
   background-color: #ccc;
   border: 1px solid #858585;
   border-radius: 5px;
-  width: 45%;
+  width: min-content;
   min-height: 500px;
 }
 
@@ -19,7 +19,9 @@
   width: 200px;
   background-color: red;
   transition: transform 0.3s;
-  background-size: cover
+  background-size: cover;
+  border: 5px solid transparent;
+  background-repeat: no-repeat;
 }
 
 .fighter:hover {
