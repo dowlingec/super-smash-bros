@@ -1,5 +1,6 @@
 import './App.css';
 import Fighter from './components/Fighter';
+import FighterScreen from './components/FighterScreen';
 
 function App() {
   return (
@@ -11,13 +12,7 @@ function App() {
         <Fighter name={'Ganondorf'} color={'purple'} />
         <Fighter name={'Sheik'} color={'lightblue'} />
       </div>
-      <div classNAme="fighter-screen">
-        <h2>Roy</h2>
-        <img src="https://www.smashbros.com/assets_v2/img/fighter/roy/main.png" />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, modi nobis. Vero harum ratione nostrum suscipit doloribus dolorum, vel asperiores non quidem, quibusdam atque laudantium culpa unde labore velit. Similique.
-        </p>
-      </div>
+      <FighterScreen />
     </div>
   );
 }
