@@ -1,7 +1,16 @@
-
-const SideNavigation = () => {
+const SideNavigation = ({ characters, isVisible }) => {
     return (
-        <div></div>
+        <nav className="side-nav" style={{display: isVisible ? "block" : "none"}}>
+            {
+                characters.map((character) => {
+                    return(
+                        <div>
+                            <p>{character.name}</p>
+                        </div>
+                    )
+                })
+            }
+        </nav>
     )
 }
 
