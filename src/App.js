@@ -1,3 +1,7 @@
+import './App.css';
+import Fighter from './components/Fighter';
+import FighterScreen from './components/FighterScreen';
+import SideNavigation from './components/SideNavigation';
 import { useState } from 'react';
 
 const characters = [
@@ -9,6 +13,10 @@ const characters = [
   {name: 'Falco', color: ['purple', 'lightskyblue']},
   {name: 'Byleth', color: ['teal', '#d33']},
   {name: 'Link', color: ['lightblue', 'goldenrod']},
+  {name: 'Kazuya', color: ['lightblue', 'goldenrod']},
+  {name: 'Sephiroth', color: ['lightblue', 'midnightblue', '#fff']},
+  {name: 'Dark_Samus', color: ['lightblue', 'goldenrod']},
+  {name: 'Donkey_Kong', color: ['tan', 'brown']}
 ]
 
 function App() {
@@ -20,3 +28,14 @@ function App() {
      <div className="fighters-grid">
         {characters.map((element) => {
           return (<Fighter name={element.name} color={element.color} setVisible={setVisible} setSelectedCharacter={setSelectedCharacter} />)
+        })}
+     </div>
+      <FighterScreen isVisible={visible} setVisible={setVisible} selectedCharacter={selectedCharacter} />
+      <SideNavigation isVisible={visible} characters={characters} setSelectedCharacter={setSelectedCharacter} />
+    </div>
+  );
+}
+
+// const Fighter = {name: 'Roy', color: 'red'}
+
+export default App;
